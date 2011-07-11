@@ -14,6 +14,7 @@ void Viewport::initializeGL(QGLPainter *painter)
 {
     painter->setStandardEffect(QGL::LitMaterial);
     QGLBuilder builder;
+    builder << QGL::Faceted;
     builder << QGLCube();
     cube = builder.finalizedSceneNode();
 }
