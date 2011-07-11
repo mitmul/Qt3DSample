@@ -8,8 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    Viewport view;
-    view.show();
+    Viewport *view = new Viewport();
+    view->show();
 }
 
 MainWindow::~MainWindow()

@@ -19,4 +19,5 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-LIBS += -l"/Developer/Applications/QtSDK/QtLabs/qt3d/lib/libQt3D.1.0.0.dylib"
+LIBS += -lQt3D \
+    -lQt3DQuick

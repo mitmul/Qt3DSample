@@ -11,6 +11,7 @@ class Viewport : public QGLView
 
 public:
     explicit Viewport(QWidget *parent = 0);
+    ~Viewport();
 
     void initializeGL(QGLPainter *painter);
 

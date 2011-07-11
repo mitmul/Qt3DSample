@@ -5,12 +5,17 @@ Viewport::Viewport(QWidget *parent) :
 {
 }
 
+Viewport::~Viewport()
+{
+    delete cube;
+}
+
 void Viewport::initializeGL(QGLPainter *painter)
 {
+    painter->setStandardEffect(QGL::LitMaterial);
     QGLBuilder builder;
-    builder << QGL::Faceted;
     builder << QGLCube();
-    builder.finalizedSceneNode();
+    cube = builder.finalizedSceneNode();
 }
 
 void Viewport::paintGL(QGLPainter *painter)
